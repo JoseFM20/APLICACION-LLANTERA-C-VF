@@ -1,0 +1,115 @@
+.container_main {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  overflow: hidden;
+  margin-left: 150px; /* Margen izquierdo cuando el sidebar está expandido */
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .content {
+  margin-left: 60px; /* Ajuste del margen cuando el sidebar está colapsado */
+}
+
+
+.background-index {
+  padding: 35px; 
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1a1a1a;
+  height: calc(100vh - 60px);
+  overflow-y: auto;
+  margin-top: 120px; /* Añade margen superior para evitar solapamiento */
+  background-image: url('./assets/img/FondoMetalico.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+}
+
+.title-card {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.tires-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; 
+  gap: 30px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+
+@media (min-width: 1045px) and (max-width: 1134px) {
+  .background-index {
+    margin-top: 170px; 
+  }
+
+  .tires-grid {
+    gap: 25px; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1044px) {
+  .background-index {
+    margin-top: 180px; 
+  }
+
+  .tires-grid {
+    gap: 25px; 
+  }
+}
+
+@media (min-width: 629px) and (max-width: 769px) {
+  .background-index {
+    margin-top: 190px; 
+  }
+
+  .tires-grid {
+    gap: 20px; 
+  }
+}
+
+@media (min-width: 537px) and (max-width: 628px) {
+  .background-index {
+    margin-top: 250px; 
+  }
+
+  .tires-grid {
+    gap: 15px;
+  }
+}
+
+
+@media (max-width: 536px) {
+  .background-index {
+    margin-top: 290px;
+  }
+
+  .tires-grid {
+    gap: 10px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .background-index {
+    margin-top: 380px;
+  }
+
+  .tires-grid {
+    gap: 10px;
+
+  }
+}
